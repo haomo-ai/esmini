@@ -11,7 +11,11 @@
  */
 
 #include <stdio.h>
-
+#ifdef _WIN32
+	#include <winsock.h>
+#else
+	#include <sys/time.h>
+#endif
 #include "UDP.hpp"
 #include "CommonMini.hpp"
 
